@@ -1,4 +1,4 @@
-
+![KakaoTalk_20210404_185933004](https://user-images.githubusercontent.com/45708825/113505159-0ce6d280-9578-11eb-9e77-771276e2ba1f.png)
 
 # ArrayList
 * 배열같은거지만 객체들이 추가되어 용량을 초과하면 자동으로 부족한 크기많큼 늘어남
