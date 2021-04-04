@@ -1,6 +1,9 @@
+
+
 # ArrayList
 * 배열같은거지만 객체들이 추가되어 용량을 초과하면 자동으로 부족한 크기많큼 늘어남
 * C++의 백터같이 쓰이지 않을까???
+* List클래스 ArrayList, Vector, LinkedList들은 동일한 함수를 사용한다.
 
 ```java
 
@@ -12,20 +15,23 @@ ArrayList<Integer> num = new ArrayList<>();             <--- 뒷부분 타입은
 ArrayList<Integer> num = new ArrayList<>(10);           <--- 초기 용량 지정
 ArrayList<integer> num = new ArrayList<>(Arrays.asList(1,2,3)); <---생성시 값 추가
 
-add()
+boolean add(E e)/ void add()
 list.add(3)     <--- 값추가
 list.add(null); <--- null값 추가 가능
 list.add(1,10); <--- indext 1뒤에 10 삽입, index를 생략하면 맨 뒤에 추가된다. 중간에 하면 한칸씩 밀려남
 // insert를 해야할 경우가 많다면 ArrayList보단 LinkedList를 활용하는게 좋음 
 
-remove()
+set(int index, E element)
+주어진 인덱스에 저장된 객체를 주어진 객체로 바꾼다.
+
+E remove(int index)
 list.remove(1); <--- index 1 제거
 list.clear();   <--- 모든 값 제거 
 
-get()
+E get(int index)
 list.get(0);    <--- index 0번째의 값에 접근 list[0] 이거 안된다. 해봤음
 
-contains()
+boolean contains(Object o)
 list.contains(1); <--- list에 1이 있는지 검색 : true, flase, find()같은거지
 
 indexOf()
@@ -57,7 +63,33 @@ removeAll()
 boolean removeAll(Collection<?> c) 
 ```
 
+# java.util.Arrays;
+자바에서 배열이나 리스트를 정렬한다고하면 sort()를 쓴다.
+Arrays클래스는 배열의 복사,정렬,검색과 같은 배열 조작 기능을 가지고 있다.
 
+## 배열의 오름차순(String도 가능)
+* 기본 타입 배열이나 String배열 가능
+```java
+int arr[] = {4,2,4,1};
+Arrays.sort(arr);
+```
 
+## 배열의 내림차순(String은 기본 타입이 아님)
+* Collections.reversOrder()를 써서해야한다.
+* 기본타입아님!!!
+* 기본타입 정렬할때는 기본타입의 배열을 래퍼클래스로 만들어 Comparator를 두번쨰 인자로 넣어줘야한다.
+```java
+Integer arr[] = {23,3,1,4};
+Arrays.sort(arr,Collections.reversOrder());//기본 타입 아님
 
+int arr[] = {23,1,3,2};
+Arrays.sort(arr,Cllections.reversOrder()); // 기본 타입
+```
+
+## 배열 일부분만 정렬
+Array.sort()의 매개값으로 배열,시작 index, 끝index(시작에서 끝index만큼의 갯수만큼 정려)를 넣어주면 일부분만 정렬 할 수있다.
+```java
+int arr[] = {4,23,33,15,17,19};
+Arrays.sort(arr,0,4); ---> 0,1,2,3요소만 정렬 4,15,23,33,17,19
+```
 
