@@ -228,7 +228,7 @@ class Solution {
 
 ```java
 2021/04/06
-문제 설명
+2016년
 
 class Solution {
     public String solution(int a, int b) {
