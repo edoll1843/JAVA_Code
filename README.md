@@ -287,3 +287,33 @@ public class Solution {
     }
 }
 ```
+```java
+2021/04/06
+나누어 떨어지는 숫자 배열
+
+import java.util.*;
+class Solution {
+    public int[] solution(int[] arr, int divisor) {
+        int[] answer = {};
+        ArrayList<Integer> tmp = new ArrayList<>();
+        for(int i =0; i< arr.length; i++)
+        {
+            if(arr[i] % divisor ==0)
+                tmp.add(arr[i]);
+        }
+        answer = new int[tmp.size()];
+        if(tmp.size() ==0)
+        {
+            answer = new int[1];
+            answer[0] = -1;
+        }
+        else
+        {
+            int size =0;
+            for(int i : tmp)
+                answer[size++] = i;
+        }
+        Arrays.sort(answer);
+        return answer;
+    }
+}
