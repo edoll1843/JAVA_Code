@@ -225,3 +225,24 @@ class Solution {
     }
 }
 ```
+
+```java
+2021/04/06
+문제 설명
+
+class Solution {
+    public String solution(int a, int b) {
+        String answer = "";
+        int mon = 0, day = 0;
+        int year[] = {31,29,31,30,31,30,31,31,30,31,30,31};
+        String an[] = {"THU","FRI","SAT","SUN","MON","TUE","WED"};
+        for(int i = 0; i< a-1; i++)
+            mon += year[i];
+        mon = mon+b;
+        day = mon%7;
+        answer = an[day];
+        return answer;
+    }
+}
+
+```
