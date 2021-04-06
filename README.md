@@ -246,3 +246,20 @@ class Solution {
 }
 
 ```
+
+```java
+2021/04/06
+가운데 글자 가져오기
+import java.util.*;
+class Solution {
+    public String solution(String s) {
+        String answer = "";
+        int len = s.length();
+        if(len % 2 ==0)
+            answer += s.substring(len/2-1,len/2+1);
+        else
+            answer += s.substring(len/2,len/2+1); // C++과는 다르게 (시작 인덱스, 끝 인덱스)의 형식이다.
+        return answer;
+    }
+}
+```
