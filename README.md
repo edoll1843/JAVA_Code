@@ -263,3 +263,27 @@ class Solution {
     }
 }
 ```
+
+```java
+2021/04/06
+같은 숫자는 싫어
+import java.util.*;
+
+public class Solution {
+    public int[] solution(int []arr) {
+        int[] answer = {};
+        ArrayList<Integer> temp = new ArrayList<>();
+        for(int i = 0; i< arr.length-1; i++)
+        {
+            if(arr[i] != arr[i+1])
+                temp.add(arr[i]);
+        }
+        temp.add(arr[arr.length-1]);
+        answer = new int[temp.size()];
+        int size =0;
+        for(var i : temp)
+            answer[size++] = i;
+        return answer;
+    }
+}
+```
