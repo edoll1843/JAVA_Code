@@ -164,7 +164,7 @@ public class javacodingtest{
 
 ```java
 2021/04/06
-
+완주하지 못한 선수
 import java.util.*;
 
 class Solution {
@@ -176,7 +176,7 @@ class Solution {
         {
             if(!participant[i].equals(completion[i]))
             {
-                return participant[i];
+                return participant[i];//C++이랑은 다르게 바로 반환이 안된다. 뭐가 잘못됐는지 몰라서 한참 헤맸다..
             }
         }
         return participant[i]; 
