@@ -7,6 +7,20 @@
 * 벡터는 항상 동기화 된다. ArrayList의 기능은 벡터와 동일하나, 자동 동기화 기능이 빠져있고 옵션으로 있다. 그리고 벡터에 비해 속도가 더 빠르다.
 * List클래스 ArrayList, Vector, LinkedList들은 동일한 함수를 사용한다.
 
+# LinkedList
+각 노드가 데이터와 포인터를 가지고 한줄로 연결되어 있는 방식의 자료구조이다.
+- Node는 LinkedList에 객체를 추가하거나 삭제하면 앞뒤 링크만 변경
+- 중간에 데이터를 추가나 삭제하더라도 전체의 인덱스가 밀리거나 당겨지지않는다.
+- ArrayList에 비해서 추가나 삭제가 용이하다.
+- 인덱스가 없기에 특정 요소에 접근하기 위해서는 순차 탐색이 필요
+- 탐색/정렬을 자주 하면 배열
+- 데이터 추가/삭제 많으면 LinkedList이용 하면 좋음
+
+# vector
+ArrayList와 동일한 내부구조이다. vector내부에 값이 추가되면 자동으로 크기가 조절된다.
+vector는 동기화된 메소드로 구성되어있기 때문에 멀티 스레드가 동시에 이 메소드들을 실행할수없다.
+즉 항상 동기화되는 특징이있다.
+
 ```java
 
 //선언//
@@ -40,12 +54,20 @@ indexOf()
 list.indexOf(1);   <--- 1이 있는 index 반환한다. 없으면 -1; 이거 유용할듯
 ```
 
-
 # HashSet
 * 중복된 값을 허용 안한다.
+* 저장 순서가 유지 되지않는다.
 * 순서를 보장 없음
 * null 값 저장 가능
+* 정렬없음
 * 내부적으로 HashMap을 사용하여 데이터 저장
+
+# TreeSet
+* 중복 안됨
+* 저장 순서 유지 안됨
+* BST구조
+* 왼쪽->오른쪽 순으로 읽어오면 오름차순 된 정렬 얻을수 있음.
+* 주가 삭제 시간 걸리지만 정렬,검색에 좋음
 
 ```java
 Set<Integer> 변수명 = new HashSet<>();     <--- 선언
@@ -55,6 +77,9 @@ add()
 * 객체를 저장 할 때 객체가 Set에 저장되어있지 않다면 True리턴, 저장됐다면 Flase
 public boolean add(E e)
 
+boolean contains(Object o)
+* 주어진 객체가 저장되어있는지
+
 remove()
 * 인자로 전달된 객체를 Set에서 삭제
 * 객체를 삭제할 때 객체가 Set에서 삭제됐으면 True, 아니면 False
@@ -63,6 +88,39 @@ public boolean remove(Object o)
 removeAll()
 * 인자로 받은 Collection에 저장된 아이템들을 HashSet에서 삭제
 boolean removeAll(Collection<?> c) 
+```
+# Map
+map은 키와 value로 구성된 객체를 저장.
+* 키는 중복 안됨
+* 값은 중복 가능
+* 중복된 키들어오면 기존것은 없어지고 새로운것으로 대치됨]
+* 키와 value는 한쌍
+
+## HashMap
+hashmap은 대표적인 map컬렉션
+* map의 성질 그대로 가지고있음
+* 키와 값은 모두 객체
+* 값은 중복, 키는 중복 안됨
+
+## TreeMap
+TreeMap은 HashMap과는다르게 정렬이 된다고 볼수있다.
+왼->오로 읽어오면 오름차순의 값을 알 수 있다.
+
+```java
+HashMap<String,String> Hash_map = new HashMap<String,String>(); <---생성
+HashMap<String,String> Hash_map = new HashMap<>();              <--- 생략 가능
+
+V put(K Key, V value)	주어진 키와 값을 추가하여 저장되면 값을 리턴합니다.
+boolean containsKey(Object Key)	주어진 키가 있는지 확인합니다.
+boolean containsValue(Object value)	주어진 값이 있는지 확인합니다.
+Set<Map.Entry<K,V>> entrySet()	모든 Map.Entry 객체를 Set에 담아 리턴합니다.
+Set<K> keySet()	모든 키를 Set객체에 담아서 리턴합니다.
+V get(Object key)	주어진 키에 있는 값을 리턴합니다.
+boolean isEmpty()	컬렉션이 비어있는지 조사합니다.
+int Size()	저장되어 있는 전체 객체의 수를 리턴합니다.
+Collection<V> values()	저장된 모든 값을 Collection에 담아서 리턴합니다.
+void clear()	저장된 모든 Map.Entry를 삭제합니다.
+V remove(Object Key)	주어진 키와 일치하는 Map.Entry를 삭제하고 값을 리턴합니다.
 ```
 
 # java.util.Arrays;
