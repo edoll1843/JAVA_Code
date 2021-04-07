@@ -317,3 +317,69 @@ class Solution {
         return answer;
     }
 }
+
+```
+
+```java
+2021/04/07
+체육복
+
+import java.util.*;
+
+class Solution {
+    public int solution(int n, int[] lost, int[] reserve) {
+            int answer = 0;
+            int arr[] = new int[n];
+            for(int i =0; i< arr.length; i++)
+                arr[i] = 0;
+            for(int j = 0; j< lost.length; j++)
+            {//잃어버린 학생 파악
+                arr[lost[j]-1] += -1; 
+            }
+            for(int x = 0; x<reserve.length; x++)
+            {//남아있는 학생 파악
+                arr[reserve[x]-1] += 1;
+            }
+        for(int i = 0; i<arr.length; i++)
+        {
+            if(i == 0)
+            {
+                if(arr[1] >0)
+                {    
+                    arr[1] += -1;
+                    arr[0] += 1;
+                }
+            }
+            else if(i == arr.length-1)
+            {
+                if(arr[i-1] > 0)
+                {
+                    arr[i-1] += -1;
+                    arr[i] += 1;
+                }
+            }
+            else
+            {
+               if(arr[i] < 0)
+               {
+                   if(arr[i+1] > 0)
+                   {
+                       arr[i+1] += -1;
+                       arr[i] += 1;
+                   }
+                   if(arr[i-1] > 0)
+                   {
+                       arr[i-1] += -1;
+                       arr[i] += 1;
+                   }
+               }
+            } 
+        }
+        for(int i =0; i< arr.length; i++)
+        {
+            if(arr[i] >= 0)
+                answer++;
+        }
+        return answer;
+    }
+}
