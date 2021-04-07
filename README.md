@@ -383,3 +383,20 @@ class Solution {
         return answer;
     }
 }
+```
+
+```java
+2021/04/07
+두 정수 사이의 합
+class Solution {
+    public long solution(int a, int b) {
+        long answer = 0;
+        if(a == b)
+            return a;
+        else
+            for(int i = (a>b ? b:a) ; i<= (a>b? b:a); i++)
+                answer += i;
+        return answer;
+    }
+}
+```
