@@ -400,3 +400,28 @@ class Solution {
     }
 }
 ```
+
+```java
+2021/04/07
+문자열 내 마음대로 정렬하기
+
+import java.util.*;
+class Solution {
+    public String[] solution(String[] strings, int n) {
+        String[] answer = {};
+        ArrayList<String> arr = new ArrayList<>();
+        for(int i = 0; i< strings.length; i++)
+        {
+            String temp = strings[i].charAt(n) + strings[i];
+            arr.add(temp);
+        }
+        Collections.sort(arr);
+        answer = new String[arr.size()];
+        for(int i = 0; i< arr.size(); i++)
+        {
+            String tmp = arr.get(i);
+                answer[i] = tmp.substring(1,tmp.length()); 
+        }
+        return answer;
+    }
+}
