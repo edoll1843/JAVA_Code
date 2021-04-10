@@ -154,6 +154,7 @@ Arrays.sort(arr,0,4); ---> 0,1,2,3요소만 정렬 4,15,23,33,17,19
 ```
 
 # String
+
 ```java
 String str;
 char[] sol = str.toCharArray();     <--- String을 char배열에 넣는 방법
@@ -222,6 +223,41 @@ sb.reverse()            <--- 리버스
 
 # 프로그래머스_java
 
+```java
+2021/04/10
+시저 암호
+class Solution {
+    public String solution(String s, int n) {
+        String answer = "";
+        for(int i =0; i<s.length(); i++)
+        {
+            char ch = s.charAt(i);
+            if(ch >= 'a' && ch <= 'z')
+            {
+                ch = (char)(ch+n);
+                if(ch >'z')
+                {
+                  ch -= 26;
+                } 
+            }
+            else if(ch >= 'A' && ch <= 'Z')
+            {
+                ch = (char)(ch+n);
+                if(ch >'Z')
+                {
+                  ch -= 26;
+                } 
+            }
+            else if(ch == ' ')
+                ch = ' ';
+            else
+                continue;
+            answer += Character.toString(ch);
+        }
+        return answer;
+    }
+}
+```
 ```java
 2021/04/10
 내적
