@@ -224,6 +224,67 @@ sb.reverse()            <--- 리버스
 # 프로그래머스_java
 
 ```java
+2021/04/11
+단어 변환
+import java.util.*;
+class Solution {
+    ArrayList<Integer> arr = new ArrayList<>();
+    public boolean char_check(String a,String b)
+    {
+        int cnt =0;
+        if(b.equals("0"))
+            return false;
+        for(int i =0; i< a.length(); i++)
+        {
+            if(a.charAt(i) != b.charAt(i))
+                cnt++;
+        }
+        return cnt ==1 ? true : false;
+    }
+    public void dfs(String begin, String target, String[] words, int index,int count)
+    {
+        begin = words[index];
+        if(begin.equals(target))
+        {
+            arr.add(count+1);
+            return;
+        }
+        words[index] = "0";
+        for(int i =0; i< words.length; i++)
+        {
+            if(char_check(begin, words[i]))
+                dfs(begin,target,words,i,count+1);
+        }
+    }
+    public int solution(String begin, String target, String[] words) {
+ 
+        int answer = 0;
+        int check =0;
+        for(var i : words)
+        {
+            if(i.equals(target))
+                check = 1;
+        }
+        if(check == 0)
+            return answer; 
+        else
+        {
+            for(int i =0; i< words.length; i++)
+            {
+                if(char_check(begin,words[i]))
+                {
+                    dfs(begin,target,words,i,0);
+                } 
+            } 
+        }
+        Collections.sort(arr);
+        answer = arr.get(0);
+        return answer;
+    }
+}
+```
+
+```java
 2021/04/10
 시저 암호
 class Solution {
