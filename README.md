@@ -207,6 +207,27 @@ sb.reverse()            <--- 리버스
 ```
 
 # 프로그래머스_java
+
+```java
+2021/04/10
+문자열 다루기 기본
+
+import java.util.*;
+import java.lang.*;
+class Solution {
+    public boolean solution(String s) {
+        boolean answer = true;
+        if(s.length() != 4 && s.length() != 6)
+            return false;
+        for(char i : s.toCharArray())
+        {
+            if(!Character.isDigit(i))
+                answer = false;
+        }
+        return answer;
+    }
+}
+```
 ```java
 2021/04/10
 문자열 내 y와 p의 개수
