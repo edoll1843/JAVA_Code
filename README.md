@@ -192,7 +192,26 @@ sb.reverse()            <--- 리버스
 ```
 
 # 프로그래머스_java
-
+```java
+2021/04/10
+문자열 내 y와 p의 개수
+class Solution {
+    boolean solution(String s) {
+        boolean answer = true;
+        int y_cnt =0, p_cnt =0;
+        char s_arr[] = s.toCharArray();
+        for(int a =0; a< s_arr.length; a++)
+        {
+            char i = s_arr[a];
+            if(i == 'p' || i == 'P')
+                p_cnt++;
+            else if(i == 'y' || i == 'Y')
+                y_cnt++;
+        }
+        return p_cnt == y_cnt ? true : false;
+    }
+}
+```
 ```java
 2021/04/10
 문자열 내림차순으로 배치하기
