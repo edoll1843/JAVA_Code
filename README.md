@@ -157,7 +157,10 @@ Arrays.sort(arr,0,4); ---> 0,1,2,3요소만 정렬 4,15,23,33,17,19
 ```java
 String str;
 char[] sol = str.toCharArray();     <--- String을 char배열에 넣는 방법
+
 String str = new String(sol);       <--- char배열 -> String
+String a = String.valueOf(str)      <--- char배열 -> String
+
 str.toString();                     <--- 출력이기도 하면서 반환도됨
 str.charAt(i);                      <--- String을 하나씩 접근. 인덱스에 맞는 char접근. 반환형은 char이다.
 
@@ -174,10 +177,14 @@ str.toLowerCase();          <--- 문자열을 모두 소문자로 변환
 str.trim()              <--- 문자열의 양쪽에있는 공백을 제거하는 함수
 
 String str = "123";
-int to = Integer.parseInt(from);    <--- String -> int
+int to = Integer.parseInt(str);    <--- String -> int(기본 int형 반환임)
+Integer to = Integer.valueOf(str);      <--- String -> int (래퍼 객체가 필요하면 이거)
 
 int from = 123;
 String to = Integer.toString(from); <--- int -> String
+
+
+
 ```
 # Character
 
