@@ -158,6 +158,7 @@ Arrays.sort(arr,0,4); ---> 0,1,2,3요소만 정렬 4,15,23,33,17,19
 String str;
 char[] sol = str.toCharArray();     <--- String을 char배열에 넣는 방법
 str.toString();                     <--- 출력이기도 하면서 반환도됨
+str.charAt(i);                      <--- String을 하나씩 접근. 인덱스에 맞는 char접근. 반환형은 char이다.
 
 String str = "010-1234-5678";
 String[] mob = str.split("-");  <--- split함수는 입력받은 특정 문자를 기준으로 문자열을 나누어 배열에 저장하여 리턴한다.
@@ -165,6 +166,11 @@ String ret1 = mob[0];   <--- 010
 String ret2 = mob[1];   <--- 1234
 String ret3 = mob[2];   <--- 5678
 
+String str = "abcd";
+str.toUpperCase();          <--- 문자열을 모두 대문자로 변환
+str.toLowerCase();          <--- 문자열을 모두 소문자로 변환
+
+str.trim()              <--- 문자열의 양쪽에있는 공백을 제거하는 함수
 
 
 
@@ -198,6 +204,8 @@ class Solution {
         return new StringBuilder(new String(sol)).reverse().toString();
     }
 }
+```
+
 ```java
 2021/04/05
 두개 뽑아서 더하기
