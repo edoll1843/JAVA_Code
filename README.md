@@ -153,6 +153,17 @@ int arr[] = {4,23,33,15,17,19};
 Arrays.sort(arr,0,4); ---> 0,1,2,3요소만 정렬 4,15,23,33,17,19
 ```
 
+# String
+
+String str;
+char[] sol = str.toCharArray();     <--- String을 char배열에 넣는 방법
+
+
+String str = "010-1234-5678";   
+String[] mob = str.split("-");  <--- split함수는 입력받은 특정 문자를 기준으로 문자열을 나누어 배열에 저장하여 리턴한다.
+String ret1 = mob[0];   <--- 010
+String ret2 = mob[1];   <--- 1234
+String ret3 = mob[2];   <--- 5678
 
 # 프로그래머스_java
 
