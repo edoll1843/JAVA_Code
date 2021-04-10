@@ -211,6 +211,23 @@ sb.reverse()            <--- 리버스
 
 ```java
 2021/04/10
+서울에서 김서방 찾기
+import java.util.*;
+class Solution {
+    public String solution(String[] seoul) {
+        String answer = "김서방은 ";
+        for(int i =0; i<seoul.length; i++)
+        {
+            if(seoul[i].equals("Kim") == true)
+                answer += i+"에 있다";
+        }
+        return answer;
+    }
+}
+```
+
+```java
+2021/04/10
 문자열 다루기 기본
 
 import java.util.*;
