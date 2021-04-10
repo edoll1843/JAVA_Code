@@ -157,6 +157,7 @@ Arrays.sort(arr,0,4); ---> 0,1,2,3요소만 정렬 4,15,23,33,17,19
 ```java
 String str;
 char[] sol = str.toCharArray();     <--- String을 char배열에 넣는 방법
+String str = new String(sol);       <--- char배열 -> String
 str.toString();                     <--- 출력이기도 하면서 반환도됨
 str.charAt(i);                      <--- String을 하나씩 접근. 인덱스에 맞는 char접근. 반환형은 char이다.
 
