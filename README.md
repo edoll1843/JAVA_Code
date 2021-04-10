@@ -224,6 +224,20 @@ sb.reverse()            <--- 리버스
 
 ```java
 2021/04/10
+내적
+class Solution {
+    public int solution(int[] a, int[] b) {
+        int answer = 0;
+        for(int i =0; i< a.length; i++)
+        {
+            answer += a[i] * b[i];
+        }
+        return answer;
+    }
+}
+```
+```java
+2021/04/10
 class Solution {
     public int solution(String s) {
         int answer = Integer.parseInt(s);    
