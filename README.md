@@ -171,10 +171,25 @@ str.toUpperCase();          <--- 문자열을 모두 대문자로 변환
 str.toLowerCase();          <--- 문자열을 모두 소문자로 변환
 
 str.trim()              <--- 문자열의 양쪽에있는 공백을 제거하는 함수
+```
+# Character
 
+Character.
 
+```java
+boolean isDigit(char ch)        <--- 지정된 문자가 숫자인지 판별
+boolean isLetter(char ch)       <--- 지정된 문자가 범용 문자인지 판별
+boolean isLowerCase(char ch)    <--- 지정된 문자가 소문자인지 판별
+boolean isUpperCase(char ch)    <--- 지정된 문자가 대문자인지 판별
+boolean isLetterOrDigit(char ch)    <--- 지정된 문자가 문자인지 숫자인지 판별
+boolean isSpaceChar(char ch)     <--- 문자가 스페이스인지 판별
+char toLowerCase(char ch)       <--- 소문자로 변환
+char toUpperCase(char ch)       <--- 대문자로 변환
+String toString()               <--- String객체로 리턴한다.
 
 ```
+
+
 # StringBuilder/StringBuffer
 ```java
 String str;
