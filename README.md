@@ -211,6 +211,23 @@ sb.reverse()            <--- 리버스
 
 ```java
 2021/04/10
+수박수박수박수박수박?
+class Solution {
+    public String solution(int n) {
+        String answer = "";
+        for(int i =0; i< n; i++)
+        {
+            if(i%2 == 0)
+                answer += "수";
+            else
+                answer += "박";
+        }
+        return answer;
+    }
+}
+```
+```java
+2021/04/10
 서울에서 김서방 찾기
 import java.util.*;
 class Solution {
