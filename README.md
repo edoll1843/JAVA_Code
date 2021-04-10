@@ -157,17 +157,47 @@ Arrays.sort(arr,0,4); ---> 0,1,2,3요소만 정렬 4,15,23,33,17,19
 ```java
 String str;
 char[] sol = str.toCharArray();     <--- String을 char배열에 넣는 방법
-
+str.toString();                     <--- 출력이기도 하면서 반환도됨
 
 String str = "010-1234-5678";
 String[] mob = str.split("-");  <--- split함수는 입력받은 특정 문자를 기준으로 문자열을 나누어 배열에 저장하여 리턴한다.
 String ret1 = mob[0];   <--- 010
 String ret2 = mob[1];   <--- 1234
 String ret3 = mob[2];   <--- 5678
+
+
+
+
+```
+# StringBuilder/StringBuffer
+```java
+String str;
+StringBuilder sb = new StringBuilder(str);
+
+sb.append(값)    <--- 뒤에 값을 붙인다.
+sb.insert(인덱스,값)    <--- 특정 인덱스부터 값을 삽입한다.
+sb.delete(index,index)  <--- 특정 인덱스부터 인덱스까지 삭제
+sb.indexOf(값)           <--- 값이 어느 인덱스에 들어있는지 확인한다.
+sb.substring(인덱스,인덱스)   <---값을 잘라온다.
+sb.length()                 <--- 길이
+sb.replace(인덱스,인덱스,값)            <--- 인덱스부터 인덱스까지 값으로 변경
+sb.reverse()            <--- 리버스
+
 ```
 
 # 프로그래머스_java
 
+```java
+2021/04/10
+문자열 내림차순으로 배치하기
+import java.util.*;
+class Solution {
+    public String solution(String s) {
+        char[] sol = s.toCharArray();
+        Arrays.sort(sol);
+        return new StringBuilder(new String(sol)).reverse().toString();
+    }
+}
 ```java
 2021/04/05
 두개 뽑아서 더하기
