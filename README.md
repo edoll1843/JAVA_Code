@@ -172,6 +172,12 @@ str.toUpperCase();          <--- 문자열을 모두 대문자로 변환
 str.toLowerCase();          <--- 문자열을 모두 소문자로 변환
 
 str.trim()              <--- 문자열의 양쪽에있는 공백을 제거하는 함수
+
+String str = "123";
+int to = Integer.parseInt(from);    <--- String -> int
+
+int from = 123;
+String to = Integer.toString(from); <--- int -> String
 ```
 # Character
 
@@ -209,6 +215,15 @@ sb.reverse()            <--- 리버스
 
 # 프로그래머스_java
 
+```java
+2021/04/10
+class Solution {
+    public int solution(String s) {
+        int answer = Integer.parseInt(s);    
+        return answer;
+    }
+}
+```
 ```java
 2021/04/10
 수박수박수박수박수박?
