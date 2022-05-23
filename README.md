@@ -223,6 +223,44 @@ sb.reverse()            <--- 리버스
 
 # 백준 JAVA
 
+```java
+2022/05/23
+10926번: ??!
+브5
+
+import java.util.*;
+
+public class Main{
+    public static void main(String args[]){
+        Scanner scan = new Scanner(System.in);
+        String ID = scan.next();
+        
+        System.out.print(ID + "??!");
+        
+    }
+}
+```
+
+```java
+2022/05/23
+25083번: 새싹
+브5
+출력문 및 이스케이스 문자/ 제어문자 활용하는 문제
+
+public class Main {
+	public static void main(String[] args) {
+		String s = "         ,r'\"7\n" + 	// \", \n 이 제어문자다.
+				   "r`-_   ,'  ,/\n" + 		// \n 이 제어문자다.
+				   " \\. \". L_r'\n" + 		// \\, \", \n 이 제어문자다.
+				   "   `~\\/\n" + 			// \\, \n 이 제어문자다.
+				   "      |\n" + 			// \n 이 제어문자다.
+				   "      |";
+ 
+		System.out.print(s);
+	}
+}
+
+```
 
 ```java
 2022/05/23
