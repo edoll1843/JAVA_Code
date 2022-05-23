@@ -225,6 +225,20 @@ sb.reverse()            <--- 리버스
 
 ```java
 2022/05/23
+10718번: We love kriii
+출력문이지만 개행 관련해서 복습되는 문제였다.
+//System.out.println()은 출력후 자동 개행한다. 즉 엔터키가 자동으로 쳐지는 반면
+//SYstem.out.print()는 줄바꿈을 하지않는다.
+public class Main{
+    public static void main(String args[]){
+        System.out.println("강한친구 대한육군");
+        System.out.println("강한친구 대한육군");
+    }
+}
+```
+
+```java
+2022/05/23
 2557번: Hello world
 브론즈5
 
