@@ -221,6 +221,29 @@ sb.reverse()            <--- 리버스
 
 ```
 
+# 백준 JAVA
+
+```java
+2021/05/23
+1000번: A+B
+브론즈5
+
+간단한 입출력문
+
+import java.util.Scanner; //입력 함수 헤더
+public class Main{ //class명은 자바 파일명과 동일해야함
+    public static void main(String args[]){ //String args[] 안쓰니까 오류났음(No Main) java 11기준
+        Scanner scan = new Scanner(System.in); //스캐너 객체 생성
+        String A = scan.next(); //scan의 반환형은 String
+        String B = scan.next();
+        
+        System.out.println(Integer.parseInt(A) + Integer.parseInt(B)); //int로 바꿔줘서 계산
+    } 
+}
+
+```
+
+
 # 프로그래머스_java
 
 ```java
