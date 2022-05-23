@@ -224,7 +224,20 @@ sb.reverse()            <--- 리버스
 # 백준 JAVA
 
 ```java
-2021/05/23
+2022/05/23
+2557번: Hello world
+브론즈5
+
+public class Main{
+    public static void main(String args[]){
+         System.out.println("Hello World!");
+    }
+   
+}
+```
+
+```java
+2022/05/23
 1000번: A+B
 브론즈5
 
