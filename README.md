@@ -223,9 +223,27 @@ sb.reverse()            <--- 리버스
 
 # 백준 JAVA
 
+
+```java
+2022/05/23
+10171번: 고양이
+브5
+출력문인데 이제 "\" 출력을 곁들인.. 
+
+public class Main{
+    public static void main(String args[]){  // 이런식으로 역슬래쉬를 출력하고싶으면 역슬래쉬를 붙이면 된다.
+        System.out.println("\\    /\\\n" + 
+                           " )  ( ')\n" + 
+                           "(  /  )\n" +
+                           " \\(__)|");
+    }
+}
+```
+
 ```java
 2022/05/23
 10718번: We love kriii
+브5
 출력문이지만 개행 관련해서 복습되는 문제였다.
 //System.out.println()은 출력후 자동 개행한다. 즉 엔터키가 자동으로 쳐지는 반면
 //SYstem.out.print()는 줄바꿈을 하지않는다.
