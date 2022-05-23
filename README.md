@@ -225,6 +225,22 @@ sb.reverse()            <--- 리버스
 
 ```java
 2022/05/23
+18108번: 1998년생인 내가 태국에서는 2541년생?!
+브5
+
+String to int를 보려는 문제
+
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String args[]){
+        Scanner scan = new Scanner(System.in);
+        System.out.print(Integer.parseInt(scan.next())-543);
+    }
+}
+```
+```java
+2022/05/23
 10926번: ??!
 브5
 
