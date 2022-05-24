@@ -251,6 +251,27 @@ String i = in.nextLine()	// String 형 입력 및 리턴 (개행을 기준으로
 # 백준 JAVA
 
 ```java
+2022/05/24
+1330번: 두 수 비교하기
+브4
+
+삼항연산자 선에서 정리 가능
+
+import java.util.*;
+
+public class Main{
+    public static void main(String args[]){
+        Scanner scan = new Scanner(System.in);
+        int a = scan.nextInt();
+        int b = scan.nextInt();
+        
+        System.out.print(a>b ? '>' : (a<b?'<':"=="));
+    }
+}
+
+```
+
+```java
 2022/05/224
 10340번: 나머지
 브5
