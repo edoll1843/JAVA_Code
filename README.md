@@ -250,6 +250,37 @@ String i = in.nextLine()	// String 형 입력 및 리턴 (개행을 기준으로
 
 # 백준 JAVA
 
+
+```java
+2022/05/24
+9498번: 시험 성적
+브4
+
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String args[]){
+        Scanner scan = new Scanner(System.in);
+        int grade = scan.nextInt();
+        char answer;
+        if(grade >= 90){
+            answer = 'A'; 
+        }else if(grade >= 80){
+            answer = 'B';
+        }else if(grade >= 70){
+            answer = 'C';
+        }else if(grade >= 60){
+            answer = 'D';   
+        }else{
+            answer = 'F';
+        }
+        System.out.println(answer);       
+    }
+}
+
+
+```
+
 ```java
 2022/05/24
 1330번: 두 수 비교하기
