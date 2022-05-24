@@ -224,6 +224,28 @@ sb.reverse()            <--- 리버스
 # 백준 JAVA
 
 ```java
+2022/05/224
+10340번: 나머지
+브5
+
+import java.util.*;
+
+public class Main{
+    public static void main(String args[]){
+        Scanner scan = new Scanner(System.in);
+        int A = Integer.parseInt(scan.next());
+        int B = Integer.parseInt(scan.next());
+        int C = Integer.parseInt(scan.next());
+        System.out.println( (A+B)%C);
+        System.out.println(((A%C)+(B%C))%C);
+        System.out.println((A*B)%C);
+         System.out.println( ((A%C)*(B%C))%C);
+        
+    }
+}
+```
+
+```java
 2022/05/23
 18108번: 1998년생인 내가 태국에서는 2541년생?!
 브5
