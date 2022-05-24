@@ -221,6 +221,33 @@ sb.reverse()            <--- 리버스
 
 ```
 
+# java.util.Scanner
+```java
+선언: Scanner 변수명 = new Scanner(System.in);
+이때 System.in은 사용자로부터 입력을 받기위한 입력 스트림. Scanner뿐만 아니라 다른 입력 방식들도 System.in이 들어간다. 스트림은 데이터의 흐름
+
+1. 기본적인 데이터 타입들을 Scanner의 메소드를 사용하여 입력 받을수 있다.
+--> 100을 입력할떄 String으로 받고싶으면 next()
+--> int로 입력받고 싶다면 nextInt()를 사용하여 원하는 타입으로 입력됨
+
+2. 공백(띄어쓰기) 또는 개행(줄 바꿈)을 기준으로 읽는다.
+--> Scanner의 입력 메소드들은 대부분 공백과 개행을 기준으로 읽는다.
+
+메소드 종류
+byte a = in.nextByte()		// byte 형 입력 및 리턴
+short b = in.nextShort()	// short 형 입력 및 리턴
+int c = in.nextInt()		// int 형 입력 및 리턴
+long d = in.nextLong()		// long 형 입력 및 리턴
+ 
+float e = in.nextFloat()	// float 형 입력 및 리턴
+double f = in.nextDouble()	// double 형 입력 및 리턴
+ 
+boolean g = in.nextBoolean()	// boolean 형 입력 및 리턴
+ 
+String h = in.next()		// String 형 입력 및 리턴 (공백을 기준으로 한 단어를 읽음)
+String i = in.nextLine()	// String 형 입력 및 리턴 (개행을 기준으로 한 줄을 읽음)
+```
+
 # 백준 JAVA
 
 ```java
