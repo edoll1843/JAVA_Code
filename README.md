@@ -252,6 +252,34 @@ String i = in.nextLine()	// String 형 입력 및 리턴 (개행을 기준으로
 
 ```java
 2022/05/24
+14681번: 사분면 고르기
+브4
+
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String args[]){
+        Scanner scan = new Scanner(System.in);
+        int x = scan.nextInt();
+        int y = scan.nextInt();
+        int answer = 1;
+        if(x<0){
+            if(y > 0)
+                answer = 2;
+            else
+                answer = 3;
+        }
+        else{
+            if(y <0)
+                answer = 4;
+        }
+        System.out.print(answer);
+    }
+}
+```
+
+```java
+2022/05/24
 2753번: 윤년
 브4
 
