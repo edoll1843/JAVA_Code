@@ -250,6 +250,26 @@ String i = in.nextLine()	// String 형 입력 및 리턴 (개행을 기준으로
 
 # 백준 JAVA
 
+```java
+2022/05/24
+2753번: 윤년
+브4
+
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String args[]){
+        Scanner scan = new Scanner(System.in);
+        int a = scan.nextInt();
+        int answer = 0;
+        if(a % 4 == 0 && (a % 400 == 0 || a % 100 != 0)){
+            answer = 1;
+        }
+        System.out.println(answer);
+    }
+}
+
+```
 
 ```java
 2022/05/24
