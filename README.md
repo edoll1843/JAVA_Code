@@ -255,6 +255,36 @@ String i = in.nextLine()	// String 형 입력 및 리턴 (개행을 기준으로
 
 ```java
 2022/05/26
+2525번: 오븐 시계
+브4
+
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String args[]){
+        Scanner scan = new Scanner(System.in);
+        int h = scan.nextInt();
+        int m = scan.nextInt();
+        int t = scan.nextInt();
+        
+        scan.close();
+        h += t/60;
+        m += t%60;
+        
+        if(m > 59){
+            h++;
+            m -= 60;
+        }
+        if(h > 23){
+            h -= 24;
+        }
+        System.out.println(h + " " + m);
+    } 
+}
+```
+
+```java
+2022/05/26
 2884번: 알람 시계
 브3
 
