@@ -250,8 +250,55 @@ boolean g = in.nextBoolean()	// boolean 형 입력 및 리턴
 String h = in.next()		// String 형 입력 및 리턴 (공백을 기준으로 한 단어를 읽음)
 String i = in.nextLine()	// String 형 입력 및 리턴 (개행을 기준으로 한 줄을 읽음)
 ```
+# java.lang.Math
+```java
+Math클래스의 모든 메소드는 클래스 메소드(static method)이므로, 객체를 생성하지 않고도 바로 사용 가능
+Math.abs(정수)  //절대값 반환
+Math.floor(정수) //내림, 소수 포함
+Math.ceil(정수) //올림, 소수 포함
+Math.round(실수)//소수점 첫째 자리에서 반올림 
+
+Math.max(값, 값)// max값 반환
+Math.min(값, 값)// min값 반환
+
+Math.pow(5, 2)//두개의 double형 값을 가지고 제곱 연산 수행 --> 25
+Math.sqrt(25)// double형 값의 제곱근 값 반환 --> 5
+```
+
 
 # 백준 JAVA
+
+```java
+2022/05/26
+2480번: 주사위 세게
+브4
+Math.max(a,b)함수를 통해 풀었다.
+
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String args[]){
+        Scanner scan = new Scanner(System.in);
+        int a = scan.nextInt();
+        int b = scan.nextInt();
+        int c = scan.nextInt();
+        scan.close();
+        if(a==b&&b==c){
+            System.out.println(10000 + a*1000); 
+        }else if(a==b || a==c || b==c){
+            if(a==b){
+                System.out.println(1000 + a*100); 
+            }else if(a==c){
+                System.out.println(1000 + a*100); 
+            }else{
+                System.out.println(1000 + b*100); 
+            }
+        }else{
+                System.out.println(Math.max(a,Math.max(b,c)) * 100);
+        }
+    }
+}
+```
 
 ```java
 2022/05/26
