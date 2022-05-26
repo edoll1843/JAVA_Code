@@ -156,6 +156,8 @@ Arrays.sort(arr,0,4); ---> 0,1,2,3요소만 정렬 4,15,23,33,17,19
 # String
 
 ```java
+System.out.printf(' ')과 System.out.printf(" ")은 다름 <--- ' '은 아스키코드 32를 출력하고 " "은 String인 공백을 출력
+
 String str;
 char[] sol = str.toCharArray();     <--- String을 char배열에 넣는 방법
 
@@ -192,6 +194,7 @@ String to = Integer.toString(from); <--- int -> String
 Character.
 
 ```java
+System.out.printf(' ')과 System.out.printf(" ")은 다름 <--- ' '은 아스키코드 32를 출력하고 " "은 String인 공백을 출력
 boolean isDigit(char ch)        <--- 지정된 문자가 숫자인지 판별
 boolean isLetter(char ch)       <--- 지정된 문자가 범용 문자인지 판별
 boolean isLowerCase(char ch)    <--- 지정된 문자가 소문자인지 판별
@@ -249,6 +252,39 @@ String i = in.nextLine()	// String 형 입력 및 리턴 (개행을 기준으로
 ```
 
 # 백준 JAVA
+
+```java
+2022/05/26
+2884번: 알람 시계
+브3
+
+시간의 뺄셈 문제이다.
+출력문에서 " "를 더해야 String으로 출력을 하게 되고
+' '을 출력하게 된다면 아스키코드 값으로 들어가기때문에 h+m+32가 되어 덧셈결과값이 출력된다.
+공백은 아스키코드로 32이기떄문
+
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String args[]){
+        Scanner scan = new Scanner(System.in);
+        int h = scan.nextInt();
+        int m = scan.nextInt();
+        
+        scan.close();
+        
+        if(m < 45){
+            h--;
+            m = 60 - (45 - m);
+            if(h < 0){
+                h = 23;
+            }
+            System.out.println(h + " " + m);
+        }else{
+            System.out.println(h + " " + (m - 45));
+        }
+    } 
+}
 
 ```java
 2022/05/24
