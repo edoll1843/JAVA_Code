@@ -268,6 +268,34 @@ Math.sqrt(25)// double형 값의 제곱근 값 반환 --> 5
 
 # 백준 JAVA
 
+
+```java
+2022/05/27
+10818번: 최소,최대
+브3
+생각보다 오래걸리고 메모리가 컸다.
+
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String args[]){
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        int maxNum =-1000000,minNum=1000000;
+        for(int i=0; i< n; i++){
+            int num = scan.nextInt();
+            if(maxNum < num){
+                maxNum = num;
+            }
+            if(minNum > num){
+                minNum = num;
+            }
+        }
+        System.out.println(minNum + " " + maxNum);
+    }
+}
+```
+
 ```java
 2022/05/27
 2739번: 구구단
