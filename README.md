@@ -269,6 +269,24 @@ Math.sqrt(25)// double형 값의 제곱근 값 반환 --> 5
 # 백준 JAVA
 
 ```java
+2022/05/27
+2739번: 구구단
+브3
+
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String args[]){
+        Scanner scan = new Scanner(System.in);
+        int N = scan.nextInt();
+        for(int i =1;i <= 9; i++){
+            System.out.println(N + " * " + i + " = " + N*i);
+        }
+    }
+}
+```
+
+```java
 2022/05/26
 2480번: 주사위 세게
 브4
