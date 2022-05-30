@@ -268,7 +268,45 @@ Math.sqrt(25)// double형 값의 제곱근 값 반환 --> 5
 
 # 백준 JAVA
 
+```java
+2022/05/30
+2562번: 최대값
+브2
 
+나는 MAP으로 풀었지만 원래는 1차원배열을 사용해서 푸는게 시간,공간 측면에서 우수
+// int maxVal = Collections.max(arr); 배열중에서 가장 큰 값
+// arr.indexOf(maxVal + 1); 가장 큰값의 index
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String args[]){
+    	Scanner scan = new Scanner(System.in);
+    	HashMap<Integer,Integer> map = new HashMap<>();
+    	
+    	for(int i = 1; i <= 9; i++) {
+    		int num = scan.nextInt();
+    		map.put(i,num);
+    	}
+    	scan.close();
+    	Integer maxNum = 0;
+    	Integer key =0;
+    	for(Integer i : map.keySet()) {
+    		if(map.get(i)>maxNum) {
+    			maxNum = map.get(i);
+    			key = i;
+    		}
+    	}
+    	
+    	System.out.println(maxNum.intValue());
+    	System.out.println(key.intValue());
+    }    
+}
+
+
+
+```
 ```java
 2022/05/27
 10818번: 최소,최대
