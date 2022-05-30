@@ -270,6 +270,32 @@ Math.sqrt(25)// double형 값의 제곱근 값 반환 --> 5
 
 ```java
 2022/05/30
+2577번: 숫자의 개수
+브2
+index문제
+C++과는 다르게 문자열에서 문자에 접근하려면 str[i]는 안되고 str.charAt(i)로 접근해야한다!!
+
+
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String args[]){
+        int arr[] = new int[10];
+        Scanner scan = new Scanner(System.in);
+        String sum = Integer.toString(scan.nextInt()*scan.nextInt()*scan.nextInt());
+        
+        for(int i =0; i< sum.length(); i++){
+        	
+            arr[sum.charAt(i)-'0']++;
+        }
+        for(Integer i : arr){
+            System.out.println(i);
+        }
+    }
+}
+```
+```java
+2022/05/30
 2562번: 최대값
 브2
 
