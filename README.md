@@ -270,6 +270,25 @@ Math.sqrt(25)// double형 값의 제곱근 값 반환 --> 5
 
 ```java
 2022/05/30
+3052번: 나머지
+브2
+중복 데이터를 허용하지 않는 set을 사용했다.
+import java.util.*;
+
+public class Main{
+    public static void main(String args[]){
+        Scanner scan = new Scanner(System.in);
+        Set<Integer> s = new HashSet<Integer>();
+        for(int i=0; i<10; i++){
+            s.add(scan.nextInt()%42);
+        }
+        System.out.println(s.size());
+    }
+}
+```
+
+```java
+2022/05/30
 2577번: 숫자의 개수
 브2
 index문제
