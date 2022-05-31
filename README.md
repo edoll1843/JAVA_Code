@@ -294,6 +294,36 @@ Math.sqrt(25)// double형 값의 제곱근 값 반환 --> 5
 # 백준 JAVA
 
 ```java
+2022/05/31
+1546번: 평균
+브1
+
+뭔가 C++이 더 쉬운거같기도..
+
+import java.util.*;
+
+public class Main{
+    public static void main(String args[]){
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt(); //총 과목
+        double arr[] = new double[n]; //배열
+        double sum = 0;
+        double avg; //평균
+        
+        for(int i =0; i<n; i++){
+            arr[i] = scan.nextInt();
+        }
+        Arrays.sort(arr);
+        int m = (int) arr[arr.length -1];
+        for(int i =0; i< n; i++){
+            sum += (arr[i]/m) * 100;
+        }
+        avg = sum / n;
+        System.out.println(avg);
+    }
+}
+```
+```java
 2022/05/30
 3052번: 나머지
 브2
