@@ -230,9 +230,15 @@ sb.reverse()            <--- 리버스
 ```java
 
 ```
-# java.io.BufferedReader
+# java.io.BufferedReader/BufferedWriter
 ```java
+버퍼를 사용한 입력으로 속도가 빠른 장점이있다.
+입력 양이 많을 경우 사용, Scanner는 입력 양이 적은 경우 사용하면 좋다!!!
 
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+BufreredWriter bw = new BUfferedWriter(new OutputStreamWriter(System.in,));
+
+int T = Integer.parseInt(br.readLine()); //readLine()으로 한줄을 읽어옴, 이 함수를 쓸때는 꼭 예외처리를 해줘야함(throws IOException), readLine()은 String 반환 
 ```
 # java.util.Scanner
 ```java
