@@ -221,19 +221,38 @@ sb.substring(인덱스,인덱스)   <---값을 잘라온다.
 sb.length()                 <--- 길이
 sb.replace(인덱스,인덱스,값)            <--- 인덱스부터 인덱스까지 값으로 변경
 sb.reverse()            <--- 리버스
+```
+# java.io.IOException
+```java
 
 ```
+# java.io.InputStreamReader
+```java
 
+```
+# java.io.BufferedReader
+```java
+
+```
 # java.util.Scanner
 ```java
 선언: Scanner 변수명 = new Scanner(System.in);
 이때 System.in은 사용자로부터 입력을 받기위한 입력 스트림. Scanner뿐만 아니라 다른 입력 방식들도 System.in이 들어간다. 스트림은 데이터의 흐름
 
-1. 기본적인 데이터 타입들을 Scanner의 메소드를 사용하여 입력 받을수 있다.
+1. 편리하지만 속도가 느리다는 단점이 있음. 알고리즘 풀때 시간초과가 날수있음.
+--> 이는 키보드로부터 버퍼를 사용하지않고 입력이 키를 누르는 즉시 전달되기때문
+--> BufferedReader는 키보드의 입력이 있을 떄마다 한 문자씩 버퍼로 전송하고 버퍼가 풀이거나 개행 문자가 나타나면 버퍼의 내용을 한번에 전송하기때문에 빠름
+--> C++의 cin은 2.051초
+--> c의 scanf는 0.798초(시스템 콜 함수라서 빠른건가?)
+--> java의 Scanner는 6.068초
+--> java의 BufferedReader는 0.934초
+
+
+2. 기본적인 데이터 타입들을 Scanner의 메소드를 사용하여 입력 받을수 있다.
 --> 100을 입력할떄 String으로 받고싶으면 next()
 --> int로 입력받고 싶다면 nextInt()를 사용하여 원하는 타입으로 입력됨
 
-2. 공백(띄어쓰기) 또는 개행(줄 바꿈)을 기준으로 읽는다.
+3. 공백(띄어쓰기) 또는 개행(줄 바꿈)을 기준으로 읽는다.
 --> Scanner의 입력 메소드들은 대부분 공백과 개행을 기준으로 읽는다.
 
 메소드 종류
